@@ -17,23 +17,23 @@ SO THAT
 ## Credits
 
 * Tyler Torres
-    - 
+    - Responsibilities
     - [GITHUB](https://github.com/TATORR)
 * Kevin Stewart
-    - 
+    - Responsibilities
     - [GITHUB](https://github.com/stewk033)
 * Christi Marchetti
-    - 
+    - Responsibilities
     - [GITHUB](https://github.com/chl850405)
 * Riley Foust
-    - 
+    - Responsibilities
     - [GITHUB](https://github.com/riley-foust18)
 
 ## Screenshots
 
-![MOCKUP](https://github.com/stewk033/mario-kart-randomizer/blob/main/assets/images/wireframe.png)
+![MOCKUP](https://github.com/stewk033/)
 
-![SCREENSHOT](https://github.com/stewk033/mario-kart-randomizer/blob/main/assets/images/screenshot.png)
+![SCREENSHOT](https://github.com/stewk033/)
 
 ## Our Solution
 
