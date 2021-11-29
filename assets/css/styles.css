@@ -1,0 +1,84 @@
+.pageOne,
+.pageTwo {
+    flex-wrap: wrap;
+
+}
+
+.navigation{
+    margin-right: 10px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.universes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.hero{
+    margin-left: 100px;
+    background-color: rgb(143, 223, 22);
+}
+
+.villian {
+    margin-right: 270px;
+}
+
+.hero,
+.villian {
+    margin-top: 50px;
+    height: 150px;
+    width: 300px;
+    font-size: 60px;
+    line-height:inherit;
+    padding: 0
+}
+
+/* page two */
+h1 {
+    text-align: center;
+}
+
+.uni {
+    margin: 10px 50px 10px 50px;
+    
+}
+
+#all {
+    height: 100px;
+    width: 200px;
+}
+
+.all {
+    font-size: 80px;
+    line-height:initial;
+}
+
+/*page five*/
+.button-clear {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.row ,
+.column {
+    border: 1px solid  black;
+}
+.row {
+    block-size: 50px;
+}
+/* Larger than mobile screen
+/*@media (min-width: 40.0rem) { ... }*/
+
+/* Larger than tablet screen */
+/* @media (min-width: 80.0rem) { ... } */
+
+/* Larger than desktop screen */
+/* @media (min-width: 120.0rem) { ... } */ 
