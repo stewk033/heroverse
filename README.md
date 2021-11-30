@@ -31,13 +31,13 @@ SO THAT
 
 ## Screenshots
 
-![MOCKUP](https://github.com/stewk033/)
+![MOCKUP](https://docs.google.com/presentation/d/1GEPveh7nhoK6PELYhx4TXcBk8odzh9o69A30CPcLWvo/edit#slide=id.g1045bf4e079_0_72)
 
 ![SCREENSHOT](https://github.com/stewk033/)
 
 ## Our Solution
 
-Live URL: (https://stewk033.github.io/)
+Live URL: (https://stewk033.github.io/heroverse/)
 
 Code:
 * [HTML] (https://github.com/stewk033/)
