@@ -31,7 +31,7 @@ SO THAT
 
 ## Screenshots
 
-![MOCKUP](https://docs.google.com/presentation/d/1GEPveh7nhoK6PELYhx4TXcBk8odzh9o69A30CPcLWvo/edit#slide=id.g1045bf4e079_0_72)
+![MOCKUP]()
 
 ![SCREENSHOT](https://github.com/stewk033/)
 
