@@ -99,11 +99,12 @@ h1 {
 .row {
     block-size: 50px;
 }
-/* Larger than mobile screen
-/*@media (min-width: 40.0rem) { ... }*/
+ div.imageContainer > li {
+     justify-content: space-around;
+     display: flex;
+     
+ }
 
-/* Larger than tablet screen */
-/* @media (min-width: 80.0rem) { ... } */
-
-/* Larger than desktop screen */
-/* @media (min-width: 120.0rem) { ... } */ 
+ ::marker {
+     -ms-flex-item-align: left;
+ }
