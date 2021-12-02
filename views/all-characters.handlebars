@@ -1,0 +1,65 @@
+<nav class="navigation">
+    <div class="navbarlg">
+        <a href="./page1.html">HeroVerse</p>
+            <a href="./page2.html">Universes</a>
+              <a href="./page3.html">Character Stats</a>
+              <a href="./Page4.html"> Fetched Character</a> 
+              <a href="./page5.html">All Characters </a>     
+    </div>
+</nav>
+<section class="pageFive">
+    <h2 class="float-left">
+        HEROVERSE
+    </h2>
+    <br>
+    <br>
+
+        {{!-- <div class="row">
+            <input class="button button-clear" type="submit" value="Star Wars">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+        </div>
+
+        <div class="row">
+            <input class="button button-clear" type="submit" value="Marvel">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+        </div>
+
+        <div class="row">
+            <input class="button button-clear" type="submit" value="Hasbro">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+        </div>
+
+        <div class="row">
+            <input class="button button-clear" type="submit" value="Disney">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+        </div>
+
+        <div class="row">
+            <input class="button button-clear" type="submit" value="DC Comics">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+        </div>
+
+        <div class="row">
+            <input class="button button-clear" type="submit" value="Dark Horse">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+        </div> --}}
+        {{#each_upto characters 20}}
+        <div class="row">
+            <input class="button button-clear" type="submit" value="{{this.universe.universe_name}}">
+            <div class="column">{{this.name}}</div>
+        </div>
+        {{/each_upto}}
+
+</section>

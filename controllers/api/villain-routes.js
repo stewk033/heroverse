@@ -1,12 +1,22 @@
 const router = require("express").Router();
-const Character = require('../../models/Character');
-const Universe = require('../../models/Universe');
+const {Character, Universe, Alignment} = require('../../models');
 
 router.get('/', async (req, res) => {
   Character.findAll({
-    where: {
+    where : {
       alignment_id: 2
-    }
+    },
+    attributes: ['id', 'name'],
+    include: [
+      {
+        model: Universe,
+        attributes: ['universe_name']
+      },
+      {
+        model: Alignment,
+        attributes: ['alignment_type']
+      },
+    ]
   })
   .then (dbPostData => res.json(dbPostData))
   .catch(err => {
@@ -15,20 +25,7 @@ router.get('/', async (req, res) => {
   });
 });
 
-router.get('/:id', async (req, res) => {
-  Character.findOne({
-    where: {
-      id: req.params.id
-    }
-  })
-  .then (dbPostData => res.json(dbPostData))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  });
-});
-
-router.get('/universe/:universe_id', async (req, res) => {
+router.get('/:universe_id', async (req, res) => {
   Character.findAll({
     where: {
       universe_id: req.params.universe_id

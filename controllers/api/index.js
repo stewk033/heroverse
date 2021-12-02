@@ -3,7 +3,7 @@ const router = require("express").Router();
 const heroRoutes = require("./hero-routes");
 const villainRoutes = require('./villain-routes')
 
-router.use("/hero", heroRoutes);
-router.use("/villain", villainRoutes);
+router.use("/", heroRoutes);
+router.use("/", villainRoutes);
 
 module.exports = router;

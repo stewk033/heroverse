@@ -5,10 +5,11 @@ const sequelize = require("./assets/config/connection");
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({
   helpers: {
-    isStarWars: function(value) {
-      if (value === 1) {
-        return true;
-      }
+    each_upto: function(array, max, options) {
+      var result = [ ];
+      for(var i = 0; i < max && i < array.length; ++i)
+          result.push(options.fn(array[i]));
+      return result.join('');
     }
   }
 });

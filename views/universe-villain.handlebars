@@ -1,0 +1,23 @@
+<nav>
+    <div class="navbarlg">
+        <a href="./page1.html">HeroVerse</p>
+            <a href="./page2.html">Universes</a>
+              <a href="./page3.html">Character Stats</a>
+              <a href="./Page4.html"> Fetched Character</a> 
+              <a href="./page5.html">All Characters </a>     
+    </div>
+</nav>
+<section class="pageTwo">
+    <h2 class="float-left">
+        HEROVERSE
+    </h2>
+    <div>
+        <h1>CHOOSE YOUR UNIVERSE</h1>
+        <div class="universes">
+            {{#each imageList}}
+            <a href="2/{{this.id}}"><img id="{{this.name}}" class="uni" src="{{this.src}}" alt=" {{this.name}} logo"></a>
+            {{/each}}
+            <a id="all" class="button uni all" href="#all">ALL</a>
+        </div>
+    </div>
+</section>

@@ -14,12 +14,9 @@
     <div>
         <h1>CHOOSE YOUR UNIVERSE</h1>
         <div class="universes">
-            <img id="star-wars" class="uni" src="../assets/images/star-wars.png" alt="star wars logo">
-            <img id="marvel" class="uni" src="../assets/images/marvel.png" alt="marvel logo">
-            <img id="hasbro" class="uni" src="../assets/images/hasbro.png" alt="hasbro logo">
-            <img id="disney" class="uni" src="../assets/images/disney.png" alt="disney logo">
-            <img id="dc" class="uni" src="../assets/images/dc-comics.png" alt="dc comics logo">
-            <img id="dark-horse" class="uni" src="../assets/images/dark-horse.png" alt="dark horse logo">
+            {{#each imageList}}
+            <a href="1/{{this.id}}"><img id="{{this.name}}" class="uni" src="{{this.src}}" alt=" {{this.name}} logo"></a>
+            {{/each}}
             <a id="all" class="button uni all" href="#all">ALL</a>
         </div>
     </div>

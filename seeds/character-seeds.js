@@ -24,70 +24,70 @@ const fetchHero = (params) => {
           })
         }
       }
-      if (response.biography.publisher === "Marvel Comics") {
+      else if (response.biography.publisher === "Marvel Comics") {
         if (response.biography.alignment === 'good') {
           heroList.push({
             id: response.id,
             name: response.name,
-            universe_id: 1,
+            universe_id: 2,
             alignment_id: 1
           })
         } else {
           heroList.push({
             id: response.id,
             name: response.name,
-            universe_id: 1,
+            universe_id: 2,
             alignment_id: 2
           })
         }
       }
-      if (response.biography.publisher === "Disney") {
+      else if (response.biography.publisher === "Disney") {
         if (response.biography.alignment === 'good') {
           heroList.push({
             id: response.id,
             name: response.name,
-            universe_id: 1,
+            universe_id: 3,
             alignment_id: 1
           })
         } else {
           heroList.push({
             id: response.id,
             name: response.name,
-            universe_id: 1,
+            universe_id: 3,
             alignment_id: 2
           })
         }
       }
-      if (response.biography.publisher === "DC Comics") {
+      else if (response.biography.publisher === "DC Comics") {
         if (response.biography.alignment === 'good') {
           heroList.push({
             id: response.id,
             name: response.name,
-            universe_id: 1,
+            universe_id: 4,
             alignment_id: 1
           })
         } else {
           heroList.push({
             id: response.id,
             name: response.name,
-            universe_id: 1,
+            universe_id: 4,
             alignment_id: 2
           })
         }
       }
-      if (response.biography.publisher === "Dark Horse Comics") {
+      else if (response.biography.publisher === "Dark Horse Comics") {
         if (response.biography.alignment === 'good') {
           heroList.push({
             id: response.id,
             name: response.name,
-            universe_id: 1,
+            universe_id: 5,
             alignment_id: 1
           })
         } else {
           heroList.push({
             id: response.id,
             name: response.name,
-            universe_id: 1,
+            universe_id: 5,
             alignment_id: 2
           })
         }
@@ -96,16 +96,11 @@ const fetchHero = (params) => {
     return heroList;
 }
 
-let i;
-
-for (i = 1; i < 200; i++) {
+for (let i = 1; i < 200; i++) {
   fetchHero(i)
 }
 
-console.log(heroList)
+const seedCharacters = () => Character.bulkCreate(heroList);
 
-const seedCharacters = () => Character.bulkCreate(heroList).then(() => console.log(heroList))
-
-
-module.exports = seedCharacters;
+module.exports = setTimeout(seedCharacters, 20000);
 

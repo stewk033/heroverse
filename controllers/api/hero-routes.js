@@ -22,10 +22,10 @@ router.get('/', async (req, res) => {
   });
 });
 
-router.get('/:id', async (req, res) => {
-  Character.findOne({
+router.get('/:universe_id', async (req, res) => {
+  Character.findAll({
     where: {
-      id: req.params.id
+      universe_id: req.params.universe_id
     }
   })
   .then (dbPostData => res.json(dbPostData))
@@ -35,10 +35,24 @@ router.get('/:id', async (req, res) => {
   });
 });
 
-router.get('/universe/:universe_id', async (req, res) => {
+// router.get('/:alignment_id', async (req, res) => {
+//   Character.findAll({
+//     where: {
+//       alignment_id: req.params.alignment_id
+//     }
+//   })
+//   .then (dbPostData => res.json(dbPostData))
+//   .catch(err => {
+//     console.log(err);
+//     res.status(500).json(err);
+//   });
+// });
+
+router.get('/:alignment_id/:universe_id', async (req, res) => {
   Character.findAll({
     where: {
-      universe_id: req.params.universe_id
+      universe_id: req.params.universe_id,
+      alignment_id: req.params.alignment_id
     }
   })
   .then (dbPostData => res.json(dbPostData))
