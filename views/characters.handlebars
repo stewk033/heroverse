@@ -1,5 +1,23 @@
-<ul>
-  {{#each characters as |character|}}
-  <li>{{character.name}}</li>
-  {{/each}}
-</ul> 
+<section class="pageOne">
+  <nav class="navigation">
+      <div class="navbarlg">
+          <a href="/">HeroVerse</p>
+            <a href="universe">Universes</a>
+            <a href="all-characters">All Characters </a>         
+      </div>
+  </nav>
+  <h2 class="float-left">
+      HEROVERSE
+  </h2>
+  <div class="logo">
+    <img src="images/heroverselogo.png" alt="heroverse logo" style ="width: 100%;">
+  </div>
+
+  <div>
+    <ul>
+    {{#each characters as |character|}}
+    <li><a href='https://www.superherodb.com/search/?q={{character.name}}'>{{character.name}}</a></li>
+    {{/each}}
+    </ul> 
+  </div>
+</section>

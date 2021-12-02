@@ -1,10 +1,8 @@
 <section class="pageOne">
     <nav class="navigation">
         <div class="navbarlg">
-            <a href="./page1.html">HeroVerse</p>
-            <a href="./page2.html">Universes</a>
-            <a href="./page3.html">Character Stats</a>
-            <a href="./Page4.html"> Fetched Character</a> 
+            <a href="/">HeroVerse</p>
+            <a href="universe">Universes</a>
             <a href="all-characters">All Characters </a>          
                 
         </div>
@@ -20,7 +18,7 @@
     <div class="btns"> 
         <dl>
           {{#each alignments as |alignment|}}
-            <dt><a class="button {{alignment.alignment_type}}" href="{{alignment.id}}">{{alignment.alignment_type}}</a></dt>
+            <dt><a class="button {{alignment.alignment_type}}" href="{{alignment.alignment_type}}">{{alignment.alignment_type}}</a></dt>
           {{/each}}
         </dl>
 </section>

@@ -96,11 +96,11 @@ const fetchHero = (params) => {
     return heroList;
 }
 
-for (let i = 1; i < 200; i++) {
+for (let i = 1; i < 731; i++) {
   fetchHero(i)
 }
 
 const seedCharacters = () => Character.bulkCreate(heroList);
 
-module.exports = setTimeout(seedCharacters, 20000);
+module.exports = setTimeout(seedCharacters, 70000);
 
