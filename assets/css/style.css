@@ -6,7 +6,18 @@
 
 .navigation{
     margin-right: 10px;
+    
 }
+
+
+div.navbarlg { 
+     margin:0;
+     padding:0;
+     list-style-type: none;
+     text-decoration: none;
+     background-color: turquoise;
+ }
+
 
 .logo {
     display: flex;
@@ -23,19 +34,19 @@
 
 
 .hero{
-    margin-left: 100px;
+    margin-left: 0px;
     background-color: rgb(143, 223, 22);
 }
 
-.villian {
-    margin-right: 270px;
+.villain {
+    margin-right: 0px;
 }
 
 .hero,
-.villian {
+.villain {
     margin-top: 50px;
     height: 150px;
-    width: 300px;
+    width: 100%;
     font-size: 60px;
     line-height:inherit;
     padding: 0

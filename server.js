@@ -3,7 +3,15 @@ const express = require("express");
 const routes = require("./controllers");
 const sequelize = require("./assets/config/connection");
 const exphbs = require('express-handlebars');
-const hbs = exphbs.create({});
+const hbs = exphbs.create({
+  helpers: {
+    isStarWars: function(value) {
+      if (value === 1) {
+        return true;
+      }
+    }
+  }
+});
 
 const app = express();
 const PORT = process.env.PORT || 3001;
