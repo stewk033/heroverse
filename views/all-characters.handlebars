@@ -1,0 +1,21 @@
+<nav class="navigation">
+    <div class="navbarlg">
+        <a href="/">HeroVerse</p>
+            <a href="universe">Universes</a>
+            <a href="all-characters">All Characters </a>    
+    </div>
+</nav>
+<section class="pageFive">
+    <h2 class="float-left">
+        HEROVERSE
+    </h2>
+    <br>
+    <br>
+        {{#each characters}}
+        <div class="row">
+            <input class="button button-clear" type="submit" value="{{this.universe.universe_name}}">
+            <div class="column">{{this.name}}</div>
+        </div>
+        {{/each}}
+
+</section>
