@@ -6,9 +6,6 @@ const dcComics = document.getElementById('dc-comics');
 const darkHorse = document.getElementById('dark-horse');
 const all = document.getElementById('all');
 
-
-
-
 starWars.addEventListener('click', displayCharacters)
 marvel.addEventListener('click',displayCharacters)
 hasbro.addEventListener('click', displayCharacters)
