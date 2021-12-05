@@ -1,6 +1,7 @@
 const Character = require('./Character');
 const Universe = require('./Universe');
-const Alignment = require('./Alignment')
+const Alignment = require('./Alignment');
+const Powerstats = require('./Powerstats');
 
 
 Universe.hasMany(Character, {
@@ -19,4 +20,8 @@ Character.belongsTo(Alignment, {
   foreignKey: 'alignment_id'
 });
 
-module.exports = {Character, Universe, Alignment};
+Character.belongsTo(Powerstats, {
+  foreignKey: 'powerstats_id'
+});
+
+module.exports = {Character, Universe, Alignment, Powerstats};

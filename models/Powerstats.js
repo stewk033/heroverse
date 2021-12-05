@@ -1,41 +1,39 @@
 const {Model, DataTypes} = require("sequelize");
 const sequelize = require('../assets/config/connection');
 
-class Character extends Model {}
+class Powerstats extends Model {}
 
 // define table columns and configuration
-Character.init(
+Powerstats.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    universe_id: {
+    intelligence: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'universe',
-        key: 'id'
-      }
+      allowNull: false,
     },
-    alignment_id: {
+    strength: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'alignment',
-        key: 'id'
-      }
+      allowNull: false,
     },
-    power_id: {
+    speed: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'powerstats',
-        key: 'id'
-      }
+      allowNull: false,
+    },
+    durability: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    power: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    combat: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     }
   },
   {
@@ -43,8 +41,8 @@ Character.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'character'
+    modelName: 'powerstats'
   }
 );
 
-module.exports = Character;
+module.exports = Powerstats;
