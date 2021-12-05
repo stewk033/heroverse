@@ -30,13 +30,6 @@ Character.init(
         key: 'id'
       }
     },
-    power_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'powerstats',
-        key: 'id'
-      }
-    }
   },
   {
     sequelize,
