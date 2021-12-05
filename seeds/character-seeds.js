@@ -1,5 +1,5 @@
-const Character = require('../models/Character');
 const fetch = require('node-fetch');
+const Character = require('../models/Character');
 
 const heroList = [];
 
@@ -13,14 +13,15 @@ const fetchHero = (params) => {
             id: response.id,
             name: response.name,
             universe_id: 1,
-            alignment_id: 1
+            alignment_id: 1,
+            // power_id: response.id
           })
         } else {
           heroList.push({
             id: response.id,
             name: response.name,
             universe_id: 1,
-            alignment_id: 2
+            alignment_id: 2,
           })
         }
       }
@@ -30,14 +31,14 @@ const fetchHero = (params) => {
             id: response.id,
             name: response.name,
             universe_id: 2,
-            alignment_id: 1
+            alignment_id: 1,
           })
         } else {
           heroList.push({
             id: response.id,
             name: response.name,
             universe_id: 2,
-            alignment_id: 2
+            alignment_id: 2,
           })
         }
       }
@@ -47,14 +48,14 @@ const fetchHero = (params) => {
             id: response.id,
             name: response.name,
             universe_id: 3,
-            alignment_id: 1
+            alignment_id: 1,
           })
         } else {
           heroList.push({
             id: response.id,
             name: response.name,
             universe_id: 3,
-            alignment_id: 2
+            alignment_id: 2,
           })
         }
       }
@@ -64,14 +65,14 @@ const fetchHero = (params) => {
             id: response.id,
             name: response.name,
             universe_id: 4,
-            alignment_id: 1
+            alignment_id: 1,
           })
         } else {
           heroList.push({
             id: response.id,
             name: response.name,
             universe_id: 4,
-            alignment_id: 2
+            alignment_id: 2,
           })
         }
       }
@@ -81,14 +82,14 @@ const fetchHero = (params) => {
             id: response.id,
             name: response.name,
             universe_id: 5,
-            alignment_id: 1
+            alignment_id: 1,
           })
         } else {
           heroList.push({
             id: response.id,
             name: response.name,
             universe_id: 5,
-            alignment_id: 2
+            alignment_id: 2,
           })
         }
       } 
@@ -96,11 +97,19 @@ const fetchHero = (params) => {
     return heroList;
 }
 
-for (let i = 1; i < 731; i++) {
-  fetchHero(i)
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-const seedCharacters = () => Character.bulkCreate(heroList);
+async function awaitCharacters() {
+  for (let i = 1; i < 731; i++) {
+    await sleep(100);
+    fetchHero(i)
+  }
+  await sleep(3000);
+  const seedCharacters = () => Character.bulkCreate(heroList);
+  return seedCharacters();
+}
 
-module.exports = setTimeout(seedCharacters, 70000);
+module.exports = awaitCharacters;
 

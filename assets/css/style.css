@@ -78,10 +78,6 @@ h1 {
     margin-right: 20px;
 }
 
-.row ,
-.column {
-    border: 1px solid  black;
-}
 .row {
     block-size: 50px;
 }

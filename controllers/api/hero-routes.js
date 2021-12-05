@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const {Character, Universe, Alignment} = require('../../models');
+const {Character, Universe, Alignment, Powerstats} = require('../../models');
 
 router.get('/', async (req, res) => {
   Character.findAll({
@@ -13,6 +13,10 @@ router.get('/', async (req, res) => {
         model: Alignment,
         attributes: ['alignment_type']
       },
+      // {
+      //   model: Powerstats,
+      //   attributes: ['intelligence', 'strength', 'speed', 'durability', 'power', 'combat']
+      // },
     ]
   })
   .then (dbPostData => res.json(dbPostData))
