@@ -27,24 +27,25 @@ SO THAT I can find the stats of my favorite heroes and villains from across the 
 ## Credits
 
 * Tyler Torres
-    - Responsibilities
+    - HTML, CSS, Navigation
     - [GITHUB](https://github.com/TATORR)
 * Kevin Stewart
-    - Responsibilities
+    - GitHub, File Structure, Presentation, Heroku
     - [GITHUB](https://github.com/stewk033)
 * Christi Marchetti
-    - Responsibilities
+    - HTML, User Story, Milligram, CSS, and JS
     - [GITHUB](https://github.com/chl850405)
 * Riley Foust
-    - Responsibilities
+    - Handlebars, Models, Seeds, JS
     - [GITHUB](https://github.com/riley-foust18)
 
 ## Screenshots
 
 ![MOCKUP](https://github.com/stewk033/heroverse/blob/main/assets/images/Heroverse-wireframe.png)
 
-![SCREENSHOT](https://github.com/stewk033/)
+![SCREENSHOT](https://github.com/stewk033/heroverse/blob/main/assets/images/hv-screenshot.png)
 
 ## Our Solution
 
-Live URL: (https://stewk033.github.io/heroverse/)
+Live URL: (https://agile-tor-28300.herokuapp.com/)
+GitHub Repository: (https://github.com/stewk033/heroverse)
